@@ -1,0 +1,44 @@
+<?php error_reporting(E_ERROR | E_WARNING | E_PARSE);
+?>
+<?php
+include "connection.php";
+switch($_GET['go'])
+{
+	case'Book':
+		include("book.php");
+	break;
+	case'Add_Book':
+		include("add_book.php");
+	break;
+	case'Save_Book':
+		include("save_book.php");
+	break;
+	case'Delete_Book':
+		include("delete_book.php");
+	break;
+	case'Category':
+		include("category.php");
+	break;
+	case'Add_Category':
+		include("add_category.php");
+	break;
+	case'Save_Category':
+		include("save_category.php");
+	break;
+	case'Delete_Category':
+		include("delete_category.php");
+	break;
+	case'Sale':
+		include("sale.php");
+	break;
+	case'Detail_Sale':
+		include("detail_sale.php");
+	break;	
+	case'Delete_Sale':
+		include("delete_sale.php");
+	break;
+	case'Sale_Report':
+		include("sale_report_form.php");
+	break;
+};
+?>
