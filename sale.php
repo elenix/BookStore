@@ -15,7 +15,7 @@
             <th width="7%" align="center" bgcolor="#CCCCCC" scope="col">No</th>
             <th width="17%" align="center" bgcolor="#CCCCCC" scope="col">No Invoice</th>
             <th width="17%" align="center" bgcolor="#CCCCCC" scope="col">Date</th>
-            <th width="49%" align="center" bgcolor="#CCCCCC" scope="col">Total</th>
+            <th width="49%" align="right" bgcolor="#CCCCCC" scope="col">Total</th>
             <th width="10%" align="center" bgcolor="#CCCCCC" scope="col">Action</th>
         </tr>
         <?php

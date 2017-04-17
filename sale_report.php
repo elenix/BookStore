@@ -15,19 +15,19 @@
         </tr>
         <tr>
             <th width="6%" align="center" scope="col" bgcolor="#CCCCCC">No</th>
-            <th width="22%" align="center" scope="col" bgcolor="#CCCCCC">ID</th>
+            <th width="22%" align="center" scope="col" bgcolor="#CCCCCC">No Invoice</th>
             <th width="55%" align="center" scope="col" bgcolor="#CCCCCC">Date</th>
             <th width="17%" align="center" scope="col" bgcolor="#CCCCCC">Total</th>
         </tr>
         <?php 
             $no = 1;
             $dte1 = substr($_POST['datestart'],6,4)."-".substr($_POST['datestart'],3,2)."-".substr($_POST['datestart'],0,2);
-            $dte2 = substr($_POST['datestart'],6,4)."-".substr($_POST['datestart'],3,2)."-".substr($_POST['datestart'],0,2);
+            $dte2 = substr($_POST['lastdate'],6,4)."-".substr($_POST['lastdate'],3,2)."-".substr($_POST['lastdate'],0,2);
             $sql = "select * from sale_transactiontbl where date >= '$dte1' and date <='$dte2' order by id desc";
             $process = mysql_query($sql);
             while($record = mysql_fetch_array($process))
             {
-                $dte = $dte2 = substr($record['datet'],8,2)."-".substr($record['date'],5,2)."-".substr($record['date'],0,4);
+                $dte = $dte2 = substr($record['date'],8,2)."-".substr($record['date'],5,2)."-".substr($record['date'],0,4);
         ?>
         <tr>
             <td align="center" scope="col" bgcolor="#FFFFFF"><?php echo $no ?></td>

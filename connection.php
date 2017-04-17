@@ -1,6 +1,6 @@
 <?php
 $srvr = "localhost";
-$db = "bookstoredb";
+$db = "ebfbookstoredb";
 $usr = "root";
 $pwd = "";
 mysql_connect($srvr, $usr, $pwd);

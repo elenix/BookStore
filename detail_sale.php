@@ -53,7 +53,7 @@ $dte = substr($record['date'],8,2)."-".substr($record['date'],5,2)."-".substr($r
         <?php
             $sql_total = "select sum(subtotal) as gtotal from detail_sale_transactiontbl where detail_sale_transactiontbl.id = '$record[id]'";
             $process_total = mysql_query($sql_total);
-            $record_total = mysql_fetch_array($process_total);
+            $record_total = mysql_fetch_assoc($process_total);
         ?>
         <tr>
             <td>&nbsp;</td>

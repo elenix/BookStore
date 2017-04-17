@@ -29,7 +29,7 @@
     $process = mysql_query($sql);
     while($record = mysql_fetch_array($process))
     {
-        $dte = $dte2 = substr($record['datet'],8,2)."-".substr($record['date'],5,2)."-".substr($record['date'],0,4);
+        $dte = $dte2 = substr($record['date'],8,2)."-".substr($record['date'],5,2)."-".substr($record['date'],0,4);
     ?>
     <tr>
         <td align="center" scope="col" bgcolor="#FFFFFF"><?php echo $no ?></td>
