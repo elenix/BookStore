@@ -1,7 +1,9 @@
 <?php
-include "connection.php";
+include "../connection.php";
 $response = array();
+
 $result = mysql_query("select * from booktbl where category_code = 'K-0' ORDER BY id desc") or die(mysql_error());
+
 if(mysql_num_rows($result) >0){
 	$response["Data_BK"] = array();
 	while($row = mysql_fetch_array($result)){

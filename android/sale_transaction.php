@@ -1,6 +1,7 @@
 <?php
 include "../connection.php";
 $response = array();
+$email = $_POST['email'];
 $result = mysql_query("SELECT * FROM sale_transactiontbl inner join detail_sale_transactiontbl on sale_transactiontbl.id = detail_sale_transactiontbl.id inner booktbl on booktbl.book_code = detail_sale_transactiontbl.book_code where sale_transactiontbl.email = '$email' and sale_transactiontbl.status = '1'") or die (mysql_error());
 
 if(mysql_num_rows($result) > 0){

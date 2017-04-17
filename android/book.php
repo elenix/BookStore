@@ -1,7 +1,11 @@
 <?php
-include "connection.php";
+
+include "../connection.php";
+
 $response = array();
-$result =  mysql_query("SELECT * FROM booktbl inner join categorytbl on booktbl.category_code = categorytbl.code_category where categorytbl.id = '$_GET[Katpos]' ORDER BY booktbl.id desc LIMIT 0,50") or die(mysql_error());
+
+$result =  mysql_query("SELECT * FROM booktbl inner join categorytbl on booktbl.category_code = categorytbl.category_code where categorytbl.id = '$_GET[KatPos]' ORDER BY booktbl.id desc LIMIT 0,50") or die(mysql_error());
+
 if(mysql_num_rows($result) > 0){
 	$respon["Data_BK"] = array();
 	while($row = mysql_fetch_array($result)){

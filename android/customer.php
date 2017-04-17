@@ -1,13 +1,15 @@
 <?php
-include "../connection.php";
-$name = $_POST['name'];
-$address = $_POST['address'];
-$email = $_POST['email'];
-$telephone = $_POST['telephone'];
+    include "../connection.php";
+
+    $name = $_POST['name'];
+    $address = $_POST['address'];
+    $email = $_POST['email'];
+    $telephone = $_POST['telephone'];
+
 if(!$_POST['name'] || !$_POST['address'] || !$_POST['email'] || !$_POST['telephone']){
-	$response["success"] = 0;
-	echo json_encode($response);
-}
+        $response["success"] = 0;
+        echo json_encode($response);
+    }
 else{
 	$response["success"] = 1;
 	echo json_encode($response);
